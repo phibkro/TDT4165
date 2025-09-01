@@ -50,17 +50,16 @@ end
 {PrintGreater 60 50}
 
 % Task 5
-% TODO
 
-declare proc {Circle R} Pi=355/113 Area Diameter Circumference 
-  Pi = 355/113
+declare fun {Circle R} Pi=355.0/113.0 Area Diameter Circumference in
   Area = Pi * R * R
-  Diameter = 2 * R
+  Diameter = 2.0 * R
   Circumference = Pi * Diameter
-  {Show (Area Diameter Circumference)}
+
+  Area#Diameter#Circumference
 end
 
-{Circle 1}
+{Show {Circle 1.0}}
 
 % Task 6
 
