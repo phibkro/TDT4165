@@ -43,7 +43,7 @@ end
 % 4.b
 
 declare proc {PrintGreater X Y}
-  {Show {MMax X Y}}
+  {Show {Max X Y}}
 end
 
 {PrintGreater 40 50}
