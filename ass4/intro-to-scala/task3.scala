@@ -17,21 +17,18 @@ Yes, if we use memory cells instead of idiomatic Oz dataflow variables + message
 
  */
 // c)
-import java.util.concurrent.atomic.AtomicInteger
 /* 
 We can achieve thread-safety using two techniques.
 Use AtomicInteger instead of mutable Ints
 or use synchronized{...} code blocks
  */
+import java.util.concurrent.atomic.AtomicInteger
 object AtomicSolution {
-  /* AtomicInteger wraps Int so all operations have to go through its Atomic interface
-   */
   private var value1 = new AtomicInteger(1000)
   private var value2 = new AtomicInteger(0)
   private var sum: Int = 0
 
   def moveOneUnit(): Unit = {
-    /* Must use Atomic methods instead of applying operations directly to Int */
     value1.getAndDecrement()
     value2.getAndIncrement()
     if(value1.get() == 0) {
@@ -41,7 +38,6 @@ object AtomicSolution {
   }
 
   def updateSum(): Unit = {
-    /* Must use Atomic Methods instead of getting Ints directly */
     sum = value1.get() + value2.get()
   }
   
@@ -76,8 +72,6 @@ object SynchronizedSolution {
   private var value2 = 0
   private var sum: Int = 0
 
-  /* synchronized{...} makes sure the block of code is only executed once at a time
-   */
   def moveOneUnit(): Unit = synchronized{
     value1 -= 1
     value2 += 1

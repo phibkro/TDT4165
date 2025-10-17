@@ -1,0 +1,20 @@
+{
+  "name": "scala-cli",
+  "argv": [
+    "/Users/nori/Library/Application Support/Coursier/bin/.scala-cli.aux",
+    "bsp",
+    "--json-options",
+    "/Users/nori/Projects/ntnu/programming-languages/intro-to-scala/.scala-build/ide-options-v2.json",
+    "--json-launcher-options",
+    "/Users/nori/Projects/ntnu/programming-languages/intro-to-scala/.scala-build/ide-launcher-options.json",
+    "--envs-file",
+    "/Users/nori/Projects/ntnu/programming-languages/intro-to-scala/.scala-build/ide-envs.json",
+    "/Users/nori/Projects/ntnu/programming-languages/intro-to-scala"
+  ],
+  "version": "1.9.1",
+  "bspVersion": "2.1.1",
+  "languages": [
+    "scala",
+    "java"
+  ]
+}
