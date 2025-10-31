@@ -12,7 +12,8 @@ class Bank(val allowedAttempts: Integer = 3) {
 
     // TODO
     // Adds a new transaction for the transfer to the transaction pool
-    def transfer(from: String, to: String, amount: Double): Unit = ???
+    def transfer(from: String, to: String, amount: Double): Unit = {
+    }
 
     // TODO
     // Process the transactions in the transaction pool
@@ -49,17 +50,21 @@ class Bank(val allowedAttempts: Integer = 3) {
     // TODO
     // The function creates a new thread ready to process
     // the transaction, and returns it as a return value
-    private def processSingleTransaction(t : Transaction) : Thread =  ???
+    private def processSingleTransaction(t : Transaction) : Thread = {
+    }
 
 
     // TODO
     // Creates a new account and returns its code to the user.
     // The account is stored in the local registry of bank accounts.
-    def createAccount(initialBalance: Double) : String = ???
+    def createAccount(initialBalance: Double) : String = {
+        accountsRegistry.put("code", Account("code", initialBalance))
+    }
 
 
-    // TODO
     // Return information about a certain account based on its code.
     // Remember to handle the case in which the account does not exist
-    def getAccount(code : String) : Option[Account] = ???
+    def getAccount(code : String) : Option[Account] = {
+        accountsRegistry.get(code)
+    }
 }
